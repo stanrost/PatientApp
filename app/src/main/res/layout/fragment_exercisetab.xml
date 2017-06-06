@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.strost.patient.controller.activities.ExerciseActivity">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/exercise_id" />
+
+            <EditText
+                android:id="@+id/etExerciseId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvId"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/etExerciseId"
+                android:text="@string/date" />
+
+            <TextView
+                android:id="@+id/tvExerciseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvDate"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvExerciseDate"
+                android:text="@string/exercise_name" />
+
+
+            <TextView
+                android:id="@+id/tvExerciseName"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvName"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvExerciseName"
+                android:text="@string/need_help" />
+
+            <TextView
+                android:id="@+id/tvGetHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvExerciseName"
+                android:layout_marginLeft="150dp"
+                android:text=""
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvHelp"
+                android:layout_marginTop="10dp"
+                android:text="@string/exercise_description" />
+
+            <TextView
+                android:id="@+id/tvCaregiverNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvDescription"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minLines="6"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btnPlayAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvCaregiverNote"
+                android:text="@string/audio_instruction"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvPicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnPlayAudio"
+                android:layout_marginTop="10dp"
+                android:text="@string/picture" />
+
+            <com.example.strost.patient.network.NetworkImageView
+                android:id="@+id/ivFullScreenImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tvPicture"
+                android:layout_marginTop="10dp" />
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvExerciseName" />
+
+            <ProgressBar
+                android:id="@+id/pbLoadingImage"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ivFullScreenImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="38dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
