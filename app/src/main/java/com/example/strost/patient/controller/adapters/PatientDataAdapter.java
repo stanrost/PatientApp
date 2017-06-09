@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.strost.patient.R;
 import com.example.strost.patient.controller.activities.ExerciseActivity;
+import com.example.strost.patient.controller.activities.MainPageActivity;
 import com.example.strost.patient.model.entities.Exercise;
 import com.example.strost.patient.model.entities.Patient;
 
@@ -54,7 +55,7 @@ public class PatientDataAdapter extends RecyclerView.Adapter<PatientDataAdapter.
             detailIntent.putExtra(EXERCISE_KEY, mExerciesList.get(getPosition()));
             detailIntent.putExtra(PATIENT_KEY, mPatient);
             v.getContext().startActivity(detailIntent);
-
+            ((MainPageActivity)v.getContext()).finish();
 
         }
     }

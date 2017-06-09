@@ -234,6 +234,9 @@ public class ExerciseActivity extends AppCompatActivity {
         ex.updateExercise(mExercise);
 
         Toast.makeText(ExerciseActivity.this, getString(R.string.feedback_saved), Toast.LENGTH_LONG).show();
+        //Temporary Solution
+        mViewPager.setCurrentItem(0);
+        mViewPager.setCurrentItem(1);
 
     }
 
